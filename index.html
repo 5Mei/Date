@@ -699,7 +699,7 @@ window.addEventListener('resize', move_input);
     function getDate() {
         let today = new Date();
         // console.log(today):  Wed Jul 17 2019 17:48:53 GMT+0800 (中国标准时间)
-        let newDate = today.getFullYear() + '/' + (today.getMonth() + 1) + '/' + today.getDate() + ' ' + today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+        //let newDate = today.getFullYear() + '/' + (today.getMonth() + 1) + '/' + today.getDate() + ' ' + today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
         // getMonth方法返回的是0-11之间的数字，代表1-12月份，若想和日历的月份时间对应，需要+1。
         return newDate;
     }
