@@ -528,8 +528,8 @@ body {
 </div>
 
 <div class="box">
-<input name="按钮" type="image" onClick="getDate()" value="按钮" class="icon" src="img/Wikipedia.png"></input>
-
+//<input name="按钮" type="image" onClick="getDate()" value="按钮" class="icon" src="img/Wikipedia.png"></input>
+<input type="button" value="Write!" onclick="getDate()"/>
 </div>
 
 <div class="box">
@@ -699,9 +699,15 @@ window.addEventListener('resize', move_input);
     function getDate() {
         let today = new Date();
         // console.log(today):  Wed Jul 17 2019 17:48:53 GMT+0800 (中国标准时间)
-        //let newDate = today.getFullYear() + '/' + (today.getMonth() + 1) + '/' + today.getDate() + ' ' + today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+        let newDate = today.getFullYear() + '/' + (today.getMonth() + 1) + '/' + today.getDate() + ' ' + today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
         // getMonth方法返回的是0-11之间的数字，代表1-12月份，若想和日历的月份时间对应，需要+1。
         return newDate;
+		
+		var fso = new ActiveXObject("Scripting.FileSystemObject"); 
+		var f, s ; 
+		f = fso.OpenTextFile("1.txt",8,true); 
+		f.WriteLine(newDate);   
+		f.Close(); 
     }
     document.write(getDate());
     // date: 2019/7/17 5:48:53
